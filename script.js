@@ -12,25 +12,59 @@ const question = document.querySelectorAll(".question");
 const answer = document.querySelectorAll(".answer");
 const img = document.querySelectorAll(".img");
 const bold = document.querySelectorAll(".boldText");
-const questionArray = new Array(question.length);
+const boldArray = new Array(bold.length);
 
 
-function openClose(place){
-    if (questionArray[place]==1){
-        answer[place].classList.add("answer");
-        img[place].classList.remove(img);
-        bold[place].classList.remove(bold);
-        questionArray[place] = 0;
-    }else{
-        answer[place].classList.remove("answer");
-        img[place].classList.add(img);
-        bold[place].classList.add(bold);
-        questionArray[place] = 1;
-    }
-}
-for (let i = 0; i < question.length; i ++){
-    questionArray[i] = 0;
-    question[i].addEventListener("click", ()=>{
-        openClose(i);
-    });
-};
+
+// for (let i = 0; i < bold.length; i++){
+//     bold[i].addEventListener("click", (event)=>{
+        
+//     })
+// }
+
+
+
+
+
+
+
+
+
+// q1.addEventListener("click", ()=>{
+//     a1.style.display = "block";
+//     q1.addEventListener("click", ()=>{
+//         a1.style.display = "none";
+//     });
+// });
+// a1.addEventListener("click", ()=>{
+//     a1.style.display = "none";
+// });
+
+
+
+
+
+
+
+
+
+
+// function openClose(place) {
+//     if (questionArray[place] == 1) {
+//         answer[place].classList.add("answer");
+//         img[place].classList.remove(img);
+//         bold[place].classList.remove(bold);
+//         questionArray[place] = 0;
+//     } else {
+//         answer[place].classList.remove("answer");
+//         img[place].classList.add(img);
+//         bold[place].classList.add(bold);
+//         questionArray[place] = 1;
+//     }
+// }
+// for (let i = 0; i < question.length; i++) {
+//     questionArray[i] = 0;
+//     question[i].addEventListener("click", () => {
+//         openClose(i);
+//     });
+// };
