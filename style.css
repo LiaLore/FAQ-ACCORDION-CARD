@@ -15,7 +15,7 @@ body{
     font-family: Kumbh Sans;
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
+    overflow: hidden;
 }
 
 .container{
@@ -30,39 +30,44 @@ body{
     box-shadow: 0px 50px 50px -20px #35127A7F;
 }
 
+.image-mob{
+    display: flex;
+    flex-direction: column;
+}
 .img-mob{
-    position: absolute;
-    width:237px;
-    margin-top: -105px;
-    /* box-shadow:#6862E6; */
+    width:100%;
+    margin-top: -125px;
+    align-items: center;
 }
 
-.img-desktop{
+.img-pattern-mob{
+    width:100%;
+    margin-top: -95px;
+    align-items: center;
+}
+.image-desktop{
     display:none;
-}
-
-.img-box{
-    display: none;
 }
 
 .title{
     text-align:center;
-    margin: 20vh auto 5vh;
+    margin: 5vh auto;
+    color: #1E1F36;
 }
 
 .question{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2% auto;
-    /* max-width: 100vw; */
-
+    margin: 2% 5%;
+    color: #4B4C5F;
 }
 
 .boldText{
     font-size: 13px;
     font-weight: 400;
     cursor: pointer;
+
 }
 
 .boldText:hover{
@@ -75,11 +80,13 @@ body{
 }
 
 .answer{
-    /* display:none; */
+    display:none;
     max-width:30vw;
     font-weight: 400;
     font-size: 12px;
-    margin-bottom: 2%;
+    margin: 2% 5%;
+    color: #787887;
+
 }
 
 .questions{
@@ -110,51 +117,57 @@ body{
         flex-direction: row;
         display: flex;
         justify-content: space-between;
-        /* position: relative; */
-        margin-top:10vh;
-        min-height: 70%;
-        /* max-width: 70vw; */
+        padding-left: 0;
     }
 
-    .img-mob{
+    .image-mob{
         display: none;
     }
 
-    .img-desktop{
+    .image-desktop{
         position: relative;
-        display: block;
-        /* position: absolute; */
-        margin-left: -16.5%;
-        /* margin-left: -160px; */
-        /* width: 472px; */
-        width: 50%;
-        clip-path: polygon(17% 0, 100% 0, 100% 100%, 17% 100%);
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        margin: 2vh 0;
+        width: 472px;
+    }
+    .img-desktop{
+        position: absolute;
+        width: 472px;
+        clip-path: polygon(3vw 0, 100% 0, 100% 100%, 3vw 100%);
+        margin-left: -3.05vw;
+
     }
 
+    .img-pattern-desktop{
+        width: 472px;
+        clip-path: polygon(3vw 0, 100% 0, 100% 100%, 3vw 100%);
+        margin-left: -3.1vw;
+    }
 
-    /* How can I fix the left side of this  img-desktop on the "container" line?? */
     .img-box{
         position: absolute;
-        display: block;
-        z-index: 100;
-        margin-left: -17%;
-        margin-bottom: -7%; 
-        width: 20%;
+        margin-left: -4vw;
+        margin-top: 6vh;
     }
 
     .questions{
         width: 60%;
     }
     .title{
-        margin-top: -10px;
+        margin: 0 auto 5vh;
     }
 
     .question{
         font-size: 14px;
+        width: 100%;
     }
 
     .answer{
         font-size: 12px;
         display: none;
+        max-width: 10vw;
     }
+
 }

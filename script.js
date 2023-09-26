@@ -1,70 +1,41 @@
-const q1 = document.getElementById("q1");
-const q2 = document.getElementById("q2");
-const q3 = document.getElementById("q3");
-const q4 = document.getElementById("q4");
-const q5 = document.getElementById("q5");
-const a1 = document.getElementById("a1");
-const a2 = document.getElementById("a2");
-const a3 = document.getElementById("a3");
-const a4 = document.getElementById("a4");
-const a5 = document.getElementById("a5");
 const question = document.querySelectorAll(".question");
 const answer = document.querySelectorAll(".answer");
 const img = document.querySelectorAll(".img");
 const bold = document.querySelectorAll(".boldText");
 const boldArray = new Array(bold.length);
+const imgArray = new Array(img.length);
+const answerArray = new Array(answer.length);
 
 
+let before;
+let boldFont;
+let rotateImg;
 
-// for (let i = 0; i < bold.length; i++){
-//     bold[i].addEventListener("click", (event)=>{
-        
-//     })
-// }
+for (let i = 0; i < bold.length; i++) {
+    bold[i].addEventListener("click", () => {
+        if (before) {
+            before.style.display = "none";
+            boldFont.style.fontWeight = "400";
+            rotateImg.style.transform = "rotate(180deg)";
+        }
+        bold[i].parentElement.nextElementSibling.style.display = "block";
+        before = bold[i].parentElement.nextElementSibling;
+        bold[i].style.fontWeight = "900";
+        boldFont = bold[i];
+        img[i].style.transform = "rotate(180deg)";
+        rotateImg = img[i];
+        img[i].style;
 
+    })
+}
 
+function rotate(){
+    for (let i = 0; i < img.length; i++) {
+        img[i].addEventListener("click", (event) => {
+            img[i].style.transform = "rotate(180deg)";
+            img[i].style.left = img[i].offsetLeft + "px";
+            img[i].style.top = img[i].offsetTop + "px";
+        }
+        )}
+}
 
-
-
-
-
-
-
-// q1.addEventListener("click", ()=>{
-//     a1.style.display = "block";
-//     q1.addEventListener("click", ()=>{
-//         a1.style.display = "none";
-//     });
-// });
-// a1.addEventListener("click", ()=>{
-//     a1.style.display = "none";
-// });
-
-
-
-
-
-
-
-
-
-
-// function openClose(place) {
-//     if (questionArray[place] == 1) {
-//         answer[place].classList.add("answer");
-//         img[place].classList.remove(img);
-//         bold[place].classList.remove(bold);
-//         questionArray[place] = 0;
-//     } else {
-//         answer[place].classList.remove("answer");
-//         img[place].classList.add(img);
-//         bold[place].classList.add(bold);
-//         questionArray[place] = 1;
-//     }
-// }
-// for (let i = 0; i < question.length; i++) {
-//     questionArray[i] = 0;
-//     question[i].addEventListener("click", () => {
-//         openClose(i);
-//     });
-// };
