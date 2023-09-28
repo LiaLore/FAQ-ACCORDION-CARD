@@ -17,15 +17,16 @@ for (let i = 0; i < bold.length; i++) {
             before.style.display = "none";
             boldFont.style.fontWeight = "400";
             rotateImg.style.transform = "rotate(180deg)";
+            question.style.display.justifyContent = "space between";
         }
         bold[i].parentElement.nextElementSibling.style.display = "block";
         before = bold[i].parentElement.nextElementSibling;
         bold[i].style.fontWeight = "900";
         boldFont = bold[i];
         img[i].style.transform = "rotate(180deg)";
+        question.style.justifyContent = "space between";
         rotateImg = img[i];
         img[i].style;
-
     })
 }
 
@@ -36,6 +37,5 @@ function rotate(){
             img[i].style.left = img[i].offsetLeft + "px";
             img[i].style.top = img[i].offsetTop + "px";
         }
-        )}
+    )}
 }
-
